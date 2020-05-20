@@ -1,10 +1,9 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 const readline = require("readline");
-const taskPath = path.join(__dirname, '/tasks')
-const tasksFiles = fs.readdirSync(taskPath)
-const lineReader = require('readline')
-const chalk = require('chalk')
+const taskPath = path.join(__dirname, '/tasks');
+const tasksFiles = fs.readdirSync(taskPath);
+const chalk = require('chalk');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -53,9 +52,9 @@ function invokeTasks(num, args) {
             return item
         }
         return Number(item)
-    })
+    });
     const func = require(`./tasks/${num}.js`);
-    const result = func.apply(undefined, args)
+    const result = func.apply(undefined, args);
     console.log(chalk.green('The answer is ') + result);
 }
 
