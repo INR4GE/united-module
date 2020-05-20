@@ -4,13 +4,16 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "node ./script.js"
+    "start": "node ./script.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.0.0",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
     "yargs": "^15.3.1"
   }
 }
