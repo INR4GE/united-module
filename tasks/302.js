@@ -2,11 +2,9 @@
 
 //'Given a natural number n. How many different digits are in it decimal notation';
 
-const takeUnique = (n) => new Set(n.toString().split(''));
-
-const initTask_302 = (n) => {
-    const result = takeUnique(n);
+const unique = (n) => {
+    const result = new Set(n.toString().split(''));
     return `${n} => ${result.size} unique digit(s)`
 };
 
-module.exports = initTask_302;
+module.exports = unique;
