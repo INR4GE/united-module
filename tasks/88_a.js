@@ -8,6 +8,7 @@ const OPTIONS = {
 };
 
 const includes = (n) => {
+    if (!n || typeof n === 'object') return  false;
     const powN = Math.pow(n, OPTIONS.TO_POW);
     const isIncludes = powN.toString().includes(OPTIONS.TO_INCLUDE);
 
