@@ -10,6 +10,11 @@ describe('unique function:', () => {
         expect(unique('softserve')).toBeTruthy();
     });
 
+    test('should return falsy value', () => {
+        expect(unique({a: 1})).toBeFalsy();
+        expect(unique([1, 2])).toBeFalsy();
+        expect(unique(null)).toBeFalsy();
+    });
 
     test('should return number of unique symbols', () => {
         const str = 'hello';
