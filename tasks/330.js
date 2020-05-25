@@ -1,6 +1,5 @@
 // THE GOAL IS:
-// fadas
-// dsadsa
+// To find perfect numbers up to N
 
 function isPerfect(num) {
     const factors = new Set([1])
@@ -22,4 +21,5 @@ function perfectsUpToN(n) {
     return perfects
 }
 
-module.exports = perfectsUpToN
+const myModule = module.exports = perfectsUpToN
+myModule.isPerfect = isPerfect
